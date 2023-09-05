@@ -1,0 +1,60 @@
+###
+### A complete description of a Prefect Deployment for flow 'hello-world'
+###
+name: block-demo
+description: null
+version: 9a78b5a6c0dfb4f4061ee060a441ba7c
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: hello-world
+manifest_path: null
+storage:
+  repository: https://github.com/shilu10/Prefect-mlops.git
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: 354e0300-166a-4d75-85a1-e7d9d64cc2d7
+  _block_document_name: file-storage
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: hello_world.py:hello_world
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    name:
+      title: name
+      default: world
+      position: 0
+      type: string
+    goodbye:
+      title: goodbye
+      default: false
+      position: 1
+      type: boolean
+  required: null
+  definitions: null
+timestamp: '2023-09-04T03:54:40.070194+00:00'
+triggers: []
