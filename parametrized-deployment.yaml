@@ -1,0 +1,64 @@
+###
+### A complete description of a Prefect Deployment for flow 'parametrized'
+###
+name: for_parameter
+description: null
+version: e70c212ebe8d94fd32f74b5f813979f0
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: parametrized
+manifest_path: null
+storage:
+  repository: https://github.com/shilu10/Prefect-mlops.git
+  reference: null
+  access_token: '**********'
+  include_git_objects: true
+  _block_document_id: 354e0300-166a-4d75-85a1-e7d9d64cc2d7
+  _block_document_name: file-storage
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: new_hw.py:parametrized
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    user:
+      title: user
+      default: Marvin
+      position: 0
+      type: string
+    question:
+      title: question
+      default: ultimate
+      position: 1
+      type: string
+    answer:
+      title: answer
+      default: 42
+      position: 2
+  required: null
+  definitions: null
+timestamp: '2023-09-05T01:23:49.741948+00:00'
+triggers: []
